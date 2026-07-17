@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografía Inmobiliaria Premium | Vende Más Rápido</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration and Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#111827',
+                            light: '#F3F4F6',
+                            accent: '#2563EB', // A professional trust-inspiring blue
+                            whatsapp: '#25D366'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for animations and specific overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Scroll reveal animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gallery hover effects */
+        .gallery-item {
+            overflow: hidden;
+        }
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-camera-retro text-brand-accent text-3xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-brand-dark">Lente<span class="text-brand-accent">Inmobiliaria</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beneficios" class="text-gray-600 hover:text-brand-accent font-medium transition-colors">Beneficios</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-brand-accent font-medium transition-colors">Servicios</a>
+                    <a href="#galeria" class="text-gray-600 hover:text-brand-accent font-medium transition-colors">Galería</a>
+                    
+                    <!-- Quick Call CTA -->
+                    <a href="tel:+34600000000" class="flex items-center gap-2 bg-brand-dark hover:bg-gray-800 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone"></i> Llamar
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/34600000000" class="text-brand-whatsapp text-3xl mr-4">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+34600000000" class="text-brand-dark text-2xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
+            <div class="max-w-3xl reveal active">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/20 text-blue-200 text-sm font-semibold tracking-wider mb-4 border border-brand-accent/30 backdrop-blur-sm">
+                    PARA GESTORÍAS INMOBILIARIAS
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Vende y Alquila Más Rápido con <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Imagen Premium</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
+                    Ayudamos a destacar tu cartera de propiedades, atraer más clientes cualificados y cerrar operaciones en tiempo récord mediante fotografía arquitectónica y tours virtuales 360º de alto impacto.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                    <!-- Call Button -->
+                    <a href="tel:+34600000000" class="w-full sm:w-auto flex justify-center items-center gap-3 bg-brand-accent hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transform hover:-translate-y-1">
+                        <i class="fa-solid fa-phone-volume text-xl"></i>
+                        Hablemos Hoy
+                    </a>
+                    
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/34600000000" class="w-full sm:w-auto flex justify-center items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] transform hover:-translate-y-1">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        Enviar WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#beneficios" class="text-white/50 hover:text-white transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">¿Tus propiedades no reciben las visitas que merecen?</h2>
+                <div class="w-20 h-1 bg-brand-accent mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 text-lg">
+                    En un mercado saturado, una imagen plana o de mala calidad hace que los compradores sigan haciendo scroll. Nosotros transformamos tus anuncios en experiencias inmersivas que detienen miradas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 reveal">
+                <!-- Benefit 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-brand-accent rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Aumenta la Visibilidad</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Las propiedades con fotografía profesional y tours 360º reciben hasta un <span class="font-bold text-brand-accent">40% más de clics</span> en los principales portales inmobiliarios (Idealista, Fotocasa).
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-brand-accent rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Filtra Clientes Reales</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        El tour virtual ahorra horas de visitas presenciales innecesarias. Quien pide visitar físicamente la propiedad tras ver el tour, ya está <span class="font-bold text-brand-accent">realmente interesado</span>.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-brand-accent rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Eleva tu Imagen de Marca</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Posiciónate como una gestoría moderna y premium. Capta la atención tanto de compradores como de <span class="font-bold text-brand-accent">propietarios que buscan a los mejores</span> para vender su casa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Servicios para Profesionales Inmobiliarios</h2>
+                <div class="w-20 h-1 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Service 1: Photography -->
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-20 reveal">
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1000" alt="Fotografía HDR Inmobiliaria" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full lg:pl-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-brand-accent font-semibold text-sm mb-4">
+                        <i class="fa-solid fa-camera"></i> Servicio Estrella
+                    </div>
+                    <h3 class="text-3xl font-bold text-brand-dark mb-4">Fotografía Profesional HDR</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Imágenes luminosas, con la perspectiva correcta y que resaltan el máximo potencial de cada espacio. Utilizamos técnicas de alto rango dinámico (HDR) para mostrar las vistas por las ventanas y mantener interiores perfectamente iluminados.
+                    </p>
+                    <ul class="space-y-3 text-gray-700 font-medium mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-whatsapp mt-1"></i> Optimizado para portales (Idealista, Fotocasa).</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-whatsapp mt-1"></i> Entrega rápida en 24/48 horas.</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-whatsapp mt-1"></i> Corrección de color y geometría.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: Virtual Tours (Alternated layout) -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000" alt="Tour Virtual 360" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90 group-hover:brightness-100">
+                        <!-- Play button overlay simulating VR -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-brand-accent/90 transition-colors shadow-lg">
+                                <i class="fa-solid fa-vr-cardboard text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full lg:pr-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-brand-accent font-semibold text-sm mb-4">
+                        <i class="fa-solid fa-arrows-spin"></i> Inmersivo
+                    </div>
+                    <h3 class="text-3xl font-bold text-brand-dark mb-4">Tours Virtuales 360º</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Una experiencia inmersiva abierta 24/7. Permite a los clientes recorrer la propiedad detalladamente desde el sofá de su casa en cualquier lugar del mundo.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Ideal para acelerar decisiones, enamorar al comprador a distancia y <strong>evitar que tú o tus agentes perdáis tiempo</strong> desplazándoos para visitas que no encajan con lo que el cliente buscaba.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Un Vistazo a Nuestro Trabajo</h2>
+                <div class="w-20 h-1 bg-brand-accent mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">No lo decimos nosotros, lo dicen nuestras imágenes. Resultados reales de propiedades reales captadas para gestorías.</p>
+            </div>
+
+            <!-- CSS Grid for Gallery -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 reveal">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-xl aspect-[4/3] bg-gray-800 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Salón luminoso" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-xl aspect-[4/3] bg-gray-800 shadow-lg md:row-span-2 md:aspect-auto">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=800" alt="Exterior con piscina" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-xl aspect-[4/3] bg-gray-800 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" alt="Cocina moderna" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-xl aspect-[4/3] bg-gray-800 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&q=80&w=800" alt="Dormitorio amplio" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-xl aspect-[4/3] bg-gray-800 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=800" alt="Baño premium" class="w-full h-full object-cover rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-accent text-white relative overflow-hidden">
+        <!-- Abstract background pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute -right-20 -top-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-black rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">¿Listo para revolucionar la forma en que presentas tus propiedades?</h2>
+            <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Deja de perder tiempo con visitas improductivas y empieza a captar la atención desde el primer clic. Contacta con nosotros y diseñaremos un paquete a medida para tu cartera de inmuebles.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="tel:+34600000000" class="w-full sm:w-auto bg-white text-brand-accent hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> Llámanos Ahora
+                </a>
+                <a href="https://wa.me/34600000000" class="w-full sm:w-auto bg-brand-dark text-white hover:bg-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-brand-whatsapp text-xl"></i> Escríbenos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-2 mb-2 justify-center md:justify-start">
+                    <i class="fa-solid fa-camera-retro text-brand-accent text-xl"></i>
+                    <span class="font-bold text-lg tracking-tight text-white">Lente<span class="text-brand-accent">Inmobiliaria</span></span>
+                </div>
+                <p class="text-sm">Madrid y alrededores</p>
+                <a href="mailto:hola@lenteinmobiliaria.com" class="text-sm hover:text-white transition-colors">hola@lenteinmobiliaria.com</a>
+            </div>
+            
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-all">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-all">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-all">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-xs border-t border-gray-800 pt-8">
+            <p>&copy; 2026 Lente Inmobiliaria. Todos los derechos reservados.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-white">Aviso Legal</a>
+                <a href="#" class="hover:text-white">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar background opacity on scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.replace('bg-white/90', 'bg-white/95');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.replace('bg-white/95', 'bg-white/90');
+                }
+            });
+
+            // Intersection Observer for scroll animations (Reveal elements)
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
