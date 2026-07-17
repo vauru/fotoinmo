@@ -224,14 +224,14 @@
             <!-- Service 2: Virtual Tours (Alternated layout) -->
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12 reveal">
                 <div class="lg:w-1/2 w-full">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000" alt="Tour Virtual 360" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90 group-hover:brightness-100">
-                        <!-- Play button overlay simulating VR -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-brand-accent/90 transition-colors shadow-lg">
-                                <i class="fa-solid fa-vr-cardboard text-white text-3xl"></i>
-                            </div>
-                        </div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] sm:aspect-video bg-gray-800">
+                        <iframe 
+                            src="https://vauru.github.io/360/" 
+                            class="absolute inset-0 w-full h-full border-0" 
+                            allow="xr-spatial-tracking; gyroscope; accelerometer" 
+                            allowfullscreen 
+                            loading="lazy">
+                        </iframe>
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full lg:pr-8">
